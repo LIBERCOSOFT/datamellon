@@ -275,6 +275,22 @@ function MyTable({ data }) {
               <td>{conHstate}</td>
               <td>{conHsegment}</td>
             </tr>
+            <tr>
+              <th scope='row'></th>
+              <td>Total</td>
+              <td>
+                {Number(allProfits[0]) +
+                  Number(allProfits[1]) +
+                  Number(allProfits[2])}
+              </td>
+              <td>
+                {(
+                  Number(allDiscounts[0]) +
+                  Number(allDiscounts[1]) +
+                  Number(allDiscounts[2])
+                ).toFixed(2)}
+              </td>
+            </tr>
           </tbody>
         </Table>
       </ResponsiveContainer>

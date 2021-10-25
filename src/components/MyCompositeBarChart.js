@@ -5,7 +5,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Legend,
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
@@ -168,8 +167,8 @@ function MyCompositeBarChart({ data }) {
   return (
     <>
       <h2>
-        A Composite Bar Chart showimg all the profit of each year from 2014 -
-        2017
+        A Composite Bar Chart showing all the profit for each regions form 2014
+        to 2017
       </h2>
       <br />
       <ResponsiveContainer width='90%' height={350}>
@@ -178,10 +177,9 @@ function MyCompositeBarChart({ data }) {
           <XAxis dataKey='name' />
           <YAxis />
           <Tooltip />
-          <Legend />
           <Bar dataKey='2014' stackId='a' fill='#1890FF' />
           <Bar dataKey='2015' stackId='a' fill='#82ca9d' />
-          <Bar dataKey='2016' stackId='a' fill='#8884d8' />
+          <Bar dataKey='2016' stackId='a' fill='#F2A104' />
           <Bar dataKey='2017' stackId='a' fill='#413ea0' />
         </BarChart>
       </ResponsiveContainer>
