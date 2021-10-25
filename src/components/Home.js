@@ -14,6 +14,7 @@ class Home extends Component {
 
     this.state = {
       data: [],
+      fetched: false,
     }
   }
 
@@ -27,32 +28,37 @@ class Home extends Component {
       .then((res) => {
         this.setState({
           data: res.data,
+          fetched: true,
         })
       })
   }
 
   render() {
-    return (
-      <>
-        <Switch>
-          <Route path='/' exact>
-            <MyBarChart data={this.state.data} />
-          </Route>
-          <Route path='/pie'>
-            <MyPieChart data={this.state.data} />
-          </Route>
-          <Route path='/cbar'>
-            <MyCompositeBarChart data={this.state.data} />
-          </Route>
-          <Route path='/time'>
-            <MyTimeSeriesChart data={this.state.data} />
-          </Route>
-          <Route path='/table'>
-            <MyTable data={this.state.data} />
-          </Route>
-        </Switch>
-      </>
-    )
+    if (this.state.fetched) {
+      return (
+        <>
+          <Switch>
+            <Route path='/' exact>
+              <MyBarChart data={this.state.data} />
+            </Route>
+            <Route path='/pie'>
+              <MyPieChart data={this.state.data} />
+            </Route>
+            <Route path='/cbar'>
+              <MyCompositeBarChart data={this.state.data} />
+            </Route>
+            <Route path='/time'>
+              <MyTimeSeriesChart data={this.state.data} />
+            </Route>
+            <Route path='/table'>
+              <MyTable data={this.state.data} />
+            </Route>
+          </Switch>
+        </>
+      )
+    } else {
+      return <h1>Loading</h1>
+    }
   }
 }
 
