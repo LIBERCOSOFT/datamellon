@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'reactstrap'
+import { ResponsiveContainer } from 'recharts'
 
 function MyTable({ data }) {
   const [allProfits, setallProfits] = useState([])
@@ -229,53 +230,54 @@ function MyTable({ data }) {
         with higher Sales
       </h2>
       <br />
-      <br />
-      <Table bordered hover>
-        <thead>
-          <tr style={{ backgroundColor: '#8884d8' }}>
-            <th>#</th>
-            <th>Segment</th>
-            <th>
-              Profits <br /> (All Years)
-            </th>
-            <th>
-              Discount <br /> (All Years)
-            </th>
-            <th>
-              States <br /> (High Sales)
-            </th>
-            <th>
-              Region <br /> (High Sales)
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope='row'>1</th>
-            <td>Corporate</td>
-            <td>{allProfits[0]}</td>
-            <td>{allDiscounts[0]}</td>
-            <td>{corHstate}</td>
-            <td>{corHsegment}</td>
-          </tr>
-          <tr>
-            <th scope='row'>2</th>
-            <td>Home Office</td>
-            <td>{allProfits[1]}</td>
-            <td>{allDiscounts[1]}</td>
-            <td>{homeHstate}</td>
-            <td>{homeHsegment}</td>
-          </tr>
-          <tr>
-            <th scope='row'>3</th>
-            <td>Consumer</td>
-            <td>{allProfits[2]}</td>
-            <td>{allDiscounts[2]}</td>
-            <td>{conHstate}</td>
-            <td>{conHsegment}</td>
-          </tr>
-        </tbody>
-      </Table>
+      <ResponsiveContainer width='100%' height={350}>
+        <Table bordered hover>
+          <thead>
+            <tr style={{ backgroundColor: '#8884d8' }}>
+              <th>#</th>
+              <th>Segment</th>
+              <th>
+                Profits <br /> (All Years)
+              </th>
+              <th>
+                Discount <br /> (All Years)
+              </th>
+              <th>
+                States <br /> (High Sales)
+              </th>
+              <th>
+                Region <br /> (High Sales)
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope='row'>1</th>
+              <td>Corporate</td>
+              <td>{allProfits[0]}</td>
+              <td>{allDiscounts[0]}</td>
+              <td>{corHstate}</td>
+              <td>{corHsegment}</td>
+            </tr>
+            <tr>
+              <th scope='row'>2</th>
+              <td>Home Office</td>
+              <td>{allProfits[1]}</td>
+              <td>{allDiscounts[1]}</td>
+              <td>{homeHstate}</td>
+              <td>{homeHsegment}</td>
+            </tr>
+            <tr>
+              <th scope='row'>3</th>
+              <td>Consumer</td>
+              <td>{allProfits[2]}</td>
+              <td>{allDiscounts[2]}</td>
+              <td>{conHstate}</td>
+              <td>{conHsegment}</td>
+            </tr>
+          </tbody>
+        </Table>
+      </ResponsiveContainer>
     </>
   )
 }

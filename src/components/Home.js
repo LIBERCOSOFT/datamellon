@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Switch } from 'react-router-dom'
+import { Spin, Space } from 'antd'
 
 import MyBarChart from './MyBarChart'
 import MyPieChart from './MyPieChart'
@@ -57,7 +58,11 @@ class Home extends Component {
         </>
       )
     } else {
-      return <h1>Loading</h1>
+      return (
+        <Space size='large'>
+          <Spin size='large' />
+        </Space>
+      )
     }
   }
 }

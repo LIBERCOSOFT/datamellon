@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { PieChart, Tooltip, Pie } from 'recharts'
+import { PieChart, Tooltip, Pie, ResponsiveContainer } from 'recharts'
 
 function MyPieChart({ data }) {
   const [wSales, setwSales] = useState(0)
@@ -267,18 +267,20 @@ function MyPieChart({ data }) {
           A Pie Chart showing the total amount of Orders according to
           regions(West, East, Central, North)
         </h2>
-        <PieChart width={600} height={250}>
-          <Tooltip />
-          <Pie
-            data={salesData}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
-            fill='#1890FF'
-            label
-          />
-        </PieChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <PieChart>
+            <Tooltip />
+            <Pie
+              data={salesData}
+              dataKey='value'
+              nameKey='name'
+              cx='50%'
+              cy='50%'
+              fill='#1890FF'
+              label
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <h2>
@@ -289,66 +291,74 @@ function MyPieChart({ data }) {
       <hr />
       <div>
         <h3>YEAR 2014 </h3>
-        <PieChart width={600} height={250}>
-          <Tooltip />
-          <Pie
-            data={y1CatData}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
-            fill='#1890FF'
-            label
-          />
-        </PieChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <PieChart>
+            <Tooltip />
+            <Pie
+              data={y1CatData}
+              dataKey='value'
+              nameKey='name'
+              cx='50%'
+              cy='50%'
+              fill='#1890FF'
+              label
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <div>
         <h3>YEAR 2015 </h3>
-        <PieChart width={600} height={250}>
-          <Tooltip />
-          <Pie
-            data={y2CatData}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
-            fill='#1890FF'
-            label
-          />
-        </PieChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <PieChart>
+            <Tooltip />
+            <Pie
+              data={y2CatData}
+              dataKey='value'
+              nameKey='name'
+              cx='50%'
+              cy='50%'
+              fill='#1890FF'
+              label
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <div>
         <h3>YEAR 2016 </h3>
-        <PieChart width={600} height={250}>
-          <Tooltip />
-          <Pie
-            data={y3CatData}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
-            fill='#1890FF'
-            label
-          />
-        </PieChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <PieChart>
+            <Tooltip />
+            <Pie
+              data={y3CatData}
+              dataKey='value'
+              nameKey='name'
+              cx='50%'
+              cy='50%'
+              fill='#1890FF'
+              label
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <div>
         <h3>YEAR 2017 </h3>
-        <PieChart width={600} height={250}>
-          <Tooltip />
-          <Pie
-            data={y4CatData}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
-            fill='#1890FF'
-            label
-          />
-        </PieChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <PieChart>
+            <Tooltip />
+            <Pie
+              data={y4CatData}
+              dataKey='value'
+              nameKey='name'
+              cx='50%'
+              cy='50%'
+              fill='#1890FF'
+              label
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
     </>
   )

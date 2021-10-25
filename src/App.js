@@ -19,20 +19,10 @@ function App() {
   return (
     <>
       <Layout>
-        <Sider
-          breakpoint='lg'
-          theme='light'
-          collapsedWidth='0'
-          onBreakpoint={(broken) => {
-            console.log(broken)
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type)
-          }}
-        >
+        <Sider breakpoint='lg' theme='light' collapsedWidth='0'>
           <div className='logo'>
             {' '}
-            <h1>Charts</h1>{' '}
+            <h1 style={{ padding: '10px' }}> Charts </h1>{' '}
           </div>
           <Menu theme='light' mode='inline' defaultSelectedKeys={['1']}>
             <Menu.Item key='1' icon={<BarChartOutlined />}>
@@ -57,7 +47,10 @@ function App() {
             className='site-layout-sub-header-background'
             style={{ padding: 0, backgroundColor: '#fff' }}
           >
-            <h2>Visual Representations of Sales data from 2014 - 2017</h2>
+            <h2 style={{ padding: '10px', textAlign: 'center' }}>
+              Visualizations of Sales data from 2014 - 2017 <br />
+              <i>All Prices are in the country's currency - USD</i>
+            </h2>
           </Header>
           <Content style={{ margin: '24px 16px 0' }}>
             <div

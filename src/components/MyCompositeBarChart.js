@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Legend,
   Tooltip,
+  ResponsiveContainer,
 } from 'recharts'
 
 function MyCompositeBarChart({ data }) {
@@ -171,17 +172,19 @@ function MyCompositeBarChart({ data }) {
         2017
       </h2>
       <br />
-      <BarChart width={500} height={500} data={profitData}>
-        <CartesianGrid />
-        <XAxis dataKey='name' />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey='2014' stackId='a' fill='#1890FF' />
-        <Bar dataKey='2015' stackId='a' fill='#82ca9d' />
-        <Bar dataKey='2016' stackId='a' fill='#8884d8' />
-        <Bar dataKey='2017' stackId='a' fill='#413ea0' />
-      </BarChart>
+      <ResponsiveContainer width='90%' height={350}>
+        <BarChart width={500} height={500} data={profitData}>
+          <CartesianGrid />
+          <XAxis dataKey='name' />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey='2014' stackId='a' fill='#1890FF' />
+          <Bar dataKey='2015' stackId='a' fill='#82ca9d' />
+          <Bar dataKey='2016' stackId='a' fill='#8884d8' />
+          <Bar dataKey='2017' stackId='a' fill='#413ea0' />
+        </BarChart>
+      </ResponsiveContainer>
     </>
   )
 }

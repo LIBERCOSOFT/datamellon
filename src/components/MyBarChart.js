@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   Bar,
+  ResponsiveContainer,
 } from 'recharts'
 
 function MyBarChart({ data }) {
@@ -163,18 +164,20 @@ function MyBarChart({ data }) {
           A Bar Chart showing the total amount made form 2014 to 2017. It can be
           hovered on to show the actual value.
         </span>
-        <BarChart width={600} height={350} data={salesData}>
-          <CartesianGrid strokeDasharray='3 3' />
-          <XAxis dataKey='year' />
-          <YAxis
-            domain={[0, 250000]}
-            tickCount={6}
-            tick={[0, 2, 4, 6, 8, 10]}
-          />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey='Total_Sales' fill='#82ca9d' />
-        </BarChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <BarChart data={salesData}>
+            <CartesianGrid strokeDasharray='3 3' />
+            <XAxis dataKey='year' />
+            <YAxis
+              domain={[0, 250000]}
+              tickCount={6}
+              tick={[0, 2, 4, 6, 8, 10]}
+            />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey='Total_Sales' fill='#82ca9d' />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <div>
@@ -183,14 +186,20 @@ function MyBarChart({ data }) {
           A Bar Chart showing the total profit from 2014 to 2017. It can be
           hovered on to show the actual value.
         </span>
-        <BarChart width={600} height={350} data={profitData}>
-          <CartesianGrid strokeDasharray='3 3' />
-          <XAxis dataKey='year' />
-          <YAxis domain={[0, 26000]} tickCount={6} tick={[0, 2, 4, 6, 8, 10]} />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey='Total_Profit' fill='#82ca9d' />
-        </BarChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <BarChart data={profitData}>
+            <CartesianGrid strokeDasharray='3 3' />
+            <XAxis dataKey='year' />
+            <YAxis
+              domain={[0, 26000]}
+              tickCount={6}
+              tick={[0, 2, 4, 6, 8, 10]}
+            />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey='Total_Profit' fill='#82ca9d' />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
       <br />
       <div>
@@ -199,14 +208,16 @@ function MyBarChart({ data }) {
           A Bar Chart showing the total profit from 2014 to 2017. It can be
           hovered on to show the actual value.
         </span>
-        <BarChart width={600} height={350} data={discountData}>
-          <CartesianGrid strokeDasharray='3 3' />
-          <XAxis dataKey='year' />
-          <YAxis domain={[0, 200]} tickCount={6} tick={[0, 2, 4, 6, 8, 10]} />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey='Total_Discount' fill='#82ca9d' />
-        </BarChart>
+        <ResponsiveContainer width='90%' height={350}>
+          <BarChart data={discountData}>
+            <CartesianGrid strokeDasharray='3 3' />
+            <XAxis dataKey='year' />
+            <YAxis domain={[0, 200]} tickCount={6} tick={[0, 2, 4, 6, 8, 10]} />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey='Total_Discount' fill='#82ca9d' />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </>
   )
