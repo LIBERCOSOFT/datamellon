@@ -1,7 +1,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Drum Machine ](#-drum-machine-)
+- [📖 Data Visualizer ](#-data-visualizer-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -19,9 +19,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Drum Machine <a name="about-project"></a>
+# 📖 Data Visualizer <a name="about-project"></a>
 
-**Drum Machine** is a web based drum pad that plays a sound when a selected button is clicked on screen or on the keyboard.
+**Data Visualizer** is a web based drum pad that plays a sound when a selected button is clicked on screen or on the keyboard.
 
 ![](public/assets/drum_machine_screenshot.png)
 ## 🛠 Built With <a name="built-with"></a>
